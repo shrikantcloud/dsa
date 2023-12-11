@@ -12,12 +12,13 @@ public class JaggedArray {
         for (int i = 0; i < jarr.length; i++) {
             jarr[i] = new int[i + 1];
         }
-        int count = 0;
+        int count = 1;
+        System.out.println("Contents of 2D Jagged Array");
         for (int i = 0; i < jarr.length; i++) {
             for (int j = 0; j < jarr[i].length; j++) {
                 jarr[i][j] = count++;
             }
-            System.out.println("Contents of 2D Jagged Array");
+
         }
 
         for (int i = 0; i < jarr.length; i++) {
