@@ -1,8 +1,5 @@
 # Data Structure & Algorithms
 
-
-
-
 Linear
 =========
 Array : Single, Double, Jagged
