@@ -25,6 +25,16 @@ public class LinkedList {
         getLength();
     }
 
+    public void printList(Node inputNode) {
+        System.out.println("Printing LinkedList...");
+        Node temp = inputNode;
+        while (temp != null) {
+            System.out.println("List value:" + temp.data);
+            temp = temp.nextNode;
+        }
+        getLength();
+    }
+
     public void appendLast(Object inputData) {
         System.out.println("Appending one Node at last in LinkedList...");
         Node newNode = new Node(inputData);
@@ -85,6 +95,49 @@ public class LinkedList {
                 tail = null;
             }
         }
+    }
+
+    public Node getNodeAtIndex(int index){
+        System.out.println("Getting Node at Index = "+index);
+        if (index < 0 || index >= length){
+            return null;
+        }
+        Node temp = head;
+        for (int i = 0; i<index; i++){
+            temp = temp.nextNode;
+        }
+        return temp;
+    }
+
+    public boolean setValueOfNodeAtIndex(int index, Object inputData){
+        System.out.println("Set value of Node at given index = "+index);
+        Node temp = getNodeAtIndex(index);
+        if (temp!=null){
+            temp.data = inputData;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean insertNodeAtParticularIndex(int index, int inputData){
+        System.out.println("Insert Node at given Index ");
+        if (index < 0 || index >= length){
+            return false;
+        }
+        if (index ==0){
+            prepend(inputData);
+            return true;
+        }
+        if (index == length){
+            appendLast(inputData);
+            return true;
+        }
+        Node newNode = new Node(inputData);
+        Node temp = getNodeAtIndex(index-1);
+        newNode.nextNode = temp.nextNode;
+        temp.nextNode = newNode;
+        length++;
+        return true;
     }
 
     public void getHead() {

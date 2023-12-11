@@ -13,5 +13,17 @@ public class Play {
         linkedList.printList();
         linkedList.removeFirst();
         linkedList.printList();
+        linkedList.appendLast(2);
+        linkedList.appendLast(3);
+        linkedList.appendLast(4);
+        linkedList.appendLast(5);
+        linkedList.printList();
+
+        System.out.println("Node valie at index = "+linkedList.getNodeAtIndex(2).data);
+        linkedList.setValueOfNodeAtIndex(2, 99);
+        linkedList.printList();
+        linkedList.insertNodeAtParticularIndex(3, 98);
+        linkedList.printList();
+
     }
 }
