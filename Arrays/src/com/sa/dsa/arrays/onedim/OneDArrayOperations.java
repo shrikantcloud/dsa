@@ -5,17 +5,6 @@ import java.util.stream.IntStream;
 
 public class OneDArrayOperations {
 
-    // Driver
-    public static void main(String[] args) {
-        OneDArrayOperations obj = new OneDArrayOperations();
-        int[] sample1DArr = obj.create();
-        obj.read(sample1DArr);
-        obj.update(sample1DArr, 5, 55);
-        obj.delete(sample1DArr, 5);
-        obj.delete(sample1DArr, 5);
-        obj.search(sample1DArr, 7);
-    }
-
     // Create
     public int[] create() {
         System.out.println("Creating 1D Array... ");
@@ -57,7 +46,7 @@ public class OneDArrayOperations {
 
     // Search
     public void search(int[] inputArr, int numToSearch) {
-        System.out.println("Searching... "+numToSearch);
+        System.out.println("Searching... " + numToSearch);
         for (int i = 0; i < inputArr.length; i++) {
             if (inputArr[i] == numToSearch) {
                 System.out.println("Number found at position:" + i);
