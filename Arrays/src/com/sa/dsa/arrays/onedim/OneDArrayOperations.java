@@ -3,11 +3,11 @@ package com.sa.dsa.arrays.onedim;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class ArrayOperations {
+public class OneDArrayOperations {
 
     // Driver
     public static void main(String[] args) {
-        ArrayOperations obj = new ArrayOperations();
+        OneDArrayOperations obj = new OneDArrayOperations();
         int[] sample1DArr = obj.create();
         obj.read(sample1DArr);
         obj.update(sample1DArr, 5, 55);
