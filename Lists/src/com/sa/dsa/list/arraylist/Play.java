@@ -1,4 +1,4 @@
-package com.sa.dsa.arrays.arraylist;
+package com.sa.dsa.list.arraylist;
 
 public class Play {
 
