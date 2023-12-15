@@ -19,11 +19,17 @@ public class Play {
         linkedList.appendLast(5);
         linkedList.printList();
 
-        System.out.println("Node valie at index = "+linkedList.getNodeAtIndex(2).data);
+        System.out.println("Node valie at index = " + linkedList.getNodeAtIndex(2).data);
         linkedList.setValueOfNodeAtIndex(2, 99);
         linkedList.printList();
         linkedList.insertNodeAtParticularIndex(3, 98);
         linkedList.printList();
-
+        linkedList.removeNodeAtParticularIndex(4);
+        linkedList.printList();
+        linkedList.reverse();
+        linkedList.printList();
+        Node middle = linkedList.findMiddle();
+        System.out.println("Middle Node data = " + middle.data);
+        System.out.println("has Cycle:" + linkedList.hasCycle());
     }
 }
